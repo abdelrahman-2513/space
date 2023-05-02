@@ -70,15 +70,15 @@ let homeLi = document.querySelector("#home");
 homeLi.addEventListener("click", (e) => {
     let destinationPage = document.querySelector(".container2");
     let homePage = document.querySelector(".home .container");
-    if (window.innerWidth < 820) {
-        document.body.style = "background-image:url(../assets/home/background-home-mobile.jpg); background-size: cover;";
-    } else if (window.innerWidth < 1100) {
-        document.body.style = "background-image:url(../assets/home/background-home-tablet.jpg); background-size: cover;";
-    }
-    else {
-        document.body.style = "background-image:url(`../assets/home/background-home-desktop.jpg`); background-size: cover;";
+//     if (window.innerWidth < 820) {
+//         document.body.style = "background-image:url(../assets/home/background-home-mobile.jpg); background-size: cover;";
+//     } else if (window.innerWidth < 1100) {
+//         document.body.style = "background-image:url(../assets/home/background-home-tablet.jpg); background-size: cover;";
+//     }
+//     else {
+//         document.body.style = "background-image:url(`../assets/home/background-home-desktop.jpg`); background-size: cover;";
 
-    }
+//     }
     homePage.style = "display:felx height:fit-content;";
     destinationPage.style = "visibility: hidden; height:0px;";
     crewPage.style = "visibility: hidden; height:0px;";
@@ -89,15 +89,15 @@ homeLi.addEventListener("click", (e) => {
 
 let destinationLi = document.querySelector("#destination");
 destinationLi.addEventListener("click", (e) => {
-    if (window.innerWidth < 820) {
-        document.body.style = "background-image:url(../assets/destination/background-destination-mobile.jpg); background-size: cover;";
-    } else if (window.innerWidth < 1100) {
-        document.body.style = "background-image:url(../assets/destination/background-destination-tablet.jpg); background-size: cover;";
-    }
-    else {
-        document.body.style = "background-image:url(../assets/destination/background-destination-desktop.jpg); background-size: cover;";
+//     if (window.innerWidth < 820) {
+//         document.body.style = "background-image:url(../assets/destination/background-destination-mobile.jpg); background-size: cover;";
+//     } else if (window.innerWidth < 1100) {
+//         document.body.style = "background-image:url(../assets/destination/background-destination-tablet.jpg); background-size: cover;";
+//     }
+//     else {
+//         document.body.style = "background-image:url(../assets/destination/background-destination-desktop.jpg); background-size: cover;";
 
-    }
+//     }
     homePage.style = "visibility: hidden; height:0px;";
     destinationPage.style = "visibility: inherit; height:fit-content";
     crewPage.style = "visibility: hidden; height:0px;";
@@ -147,15 +147,15 @@ titanBtn.addEventListener("click", (e) => {
 
 let crewLi = document.querySelector("#crew");
 crewLi.addEventListener("click", (e) => {
-    if (window.innerWidth < 820) {
-        document.body.style = "background-image:url(../assets/crew/background-crew-mobile.jpg); background-size: cover;";
-    } else if (window.innerWidth < 1100) {
-        document.body.style = "background-image:url(../assets/crew/background-crew-tablet.jpg); background-size: cover;";
-    }
-    else {
-        document.body.style = "background-image:url(../assets/crew/background-crew-desktop.jpg); background-size: cover;";
+//     if (window.innerWidth < 820) {
+//         document.body.style = "background-image:url(../assets/crew/background-crew-mobile.jpg); background-size: cover;";
+//     } else if (window.innerWidth < 1100) {
+//         document.body.style = "background-image:url(../assets/crew/background-crew-tablet.jpg); background-size: cover;";
+//     }
+//     else {
+//         document.body.style = "background-image:url(../assets/crew/background-crew-desktop.jpg); background-size: cover;";
 
-    }
+//     }
     homePage.style = "visibility: hidden; height:0px;";
     crewPage.style = "visibility: inherit; height:fit-content";
     destinationPage.style = "visibility: hidden; height:0px;";
@@ -164,45 +164,45 @@ crewLi.addEventListener("click", (e) => {
 
     crewTitle.textContent = `${myData["crew"][0]["name"]}`;
     crewPar.textContent = `${myData["crew"][0]["bio"]}`;
-    crewImg.setAttribute("src", "../assets/crew/image-mark-shuttleworth.png");
+    crewImg.setAttribute("src",  `${myData["crew"][0]["images"]["png"]}`);
 })
 let comBtn = document.querySelector("#Commander");
 comBtn.addEventListener("click", (e) => {
     crewTitle.textContent = `${myData["crew"][0]["name"]}`;
     crewPar.textContent = `${myData["crew"][0]["bio"]}`;
-    crewImg.setAttribute("src", "../assets/crew/image-mark-shuttleworth.png");
+    crewImg.setAttribute("src",  `${myData["crew"][0]["images"]["png"]}`);
 })
 let pilotBtn = document.querySelector("#Pilot");
 pilotBtn.addEventListener("click", (e) => {
     crewTitle.textContent = `${myData["crew"][1]["name"]}`;
     crewPar.textContent = `${myData["crew"][1]["bio"]}`;
-    crewImg.setAttribute("src", "../assets/crew/image-douglas-hurley.png ");
+    crewImg.setAttribute("src",  `${myData["crew"][1]["images"]["png"]}`);
 })
 let EngineerBtn = document.querySelector("#Engineer");
 EngineerBtn.addEventListener("click", (e) => {
     crewTitle.textContent = `${myData["crew"][2]["name"]}`;
     crewPar.textContent = `${myData["crew"][2]["bio"]}`;
-    crewImg.setAttribute("src", "../assets/crew/image-victor-glover.png ");
+    crewImg.setAttribute("src",  `${myData["crew"][2]["images"]["png"]}`);
 })
 let SpecialistBtn = document.querySelector("#Specialist");
 SpecialistBtn.addEventListener("click", (e) => {
     crewTitle.textContent = `${myData["crew"][3]["name"]}`;
     crewPar.textContent = `${myData["crew"][3]["bio"]}`;
-    crewImg.setAttribute("src", "../assets/crew/image-anousheh-ansari.png");
+    crewImg.setAttribute("src",  `${myData["crew"][3]["images"]["png"]}`);
 
 })
 
 let technLi = document.querySelector("#technology");
 technLi.addEventListener("click", (e) => {
-    if (window.innerWidth < 820) {
-        document.body.style = "background-image:url(../assets/technology/background-technology-mobile.jpg); background-size: cover;";
-    } else if (window.innerWidth < 1100) {
-        document.body.style = "background-image:url(../assets/technology/background-technology-tablet.jpg); background-size: cover;";
-    }
-    else {
-        document.body.style = "background-image:url(../assets/technology/background-technology-desktop.jpg); background-size: cover;";
+//     if (window.innerWidth < 820) {
+//         document.body.style = "background-image:url(../assets/technology/background-technology-mobile.jpg); background-size: cover;";
+//     } else if (window.innerWidth < 1100) {
+//         document.body.style = "background-image:url(../assets/technology/background-technology-tablet.jpg); background-size: cover;";
+//     }
+//     else {
+//         document.body.style = "background-image:url(../assets/technology/background-technology-desktop.jpg); background-size: cover;";
 
-    }
+//     }
     homePage.style = "visibility: hidden; height:0px;";
     technPage.style = "visibility: inherit; height:fit-content";
     destinationPage.style = "visibility: hidden; height:0px;";
@@ -212,7 +212,7 @@ technLi.addEventListener("click", (e) => {
 
     techTitle.textContent = `${myData["technology"][0]["name"]}`;
     techPar.textContent = `${myData["technology"][0]["description"]}`;
-    techImg.setAttribute("src", "../assets/technology/image-launch-vehicle-portrait.jpg");
+    techImg.setAttribute("src",  `${myData["technology"][0]["images"]["png"]}`);
 })
 let technLinks = document.querySelectorAll(".container4 .pick .slides div");
 
@@ -231,7 +231,7 @@ firstBtn.addEventListener("click", (e) => {
 
     techTitle.textContent = `${myData["technology"][0]["name"]}`;
     techPar.textContent = `${myData["technology"][0]["description"]}`;
-    techImg.setAttribute("src", "../assets/technology/image-launch-vehicle-portrait.jpg");
+    techImg.setAttribute("src",  `${myData["technology"][0]["images"]["png"]}`);
 
 })
 let secondBtn = document.querySelector("#two");
@@ -239,7 +239,7 @@ secondBtn.addEventListener("click", (e) => {
 
     techTitle.textContent = `${myData["technology"][1]["name"]}`;
     techPar.textContent = `${myData["technology"][1]["description"]}`;
-    techImg.setAttribute("src", "../assets/technology/image-space-capsule-portrait.jpg");
+    techImg.setAttribute("src", `${myData["technology"][1]["images"]["png"]}`);
 
 })
 let thirdBtn = document.querySelector("#three");
@@ -247,7 +247,7 @@ thirdBtn.addEventListener("click", (e) => {
 
     techTitle.textContent = `${myData["technology"][2]["name"]}`;
     techPar.textContent = `${myData["technology"][2]["description"]}`;
-    techImg.setAttribute("src", "../assets/technology/image-spaceport-portrait.jpg");
+    techImg.setAttribute("src", `${myData["technology"][2]["images"]["png"]}`);
 
 })
 
