@@ -168,21 +168,24 @@ crewLi.addEventListener("click", (e) => {
 })
 let comBtn = document.querySelector("#Commander");
 comBtn.addEventListener("click", (e) => {
-    crewTitle.textContent = `${myData["crew"][0]["name"]}`;
-    crewPar.textContent = `${myData["crew"][0]["bio"]}`;
-    crewImg.setAttribute("src",  `${myData["crew"][0]["images"]["png"]}`);
-})
-let pilotBtn = document.querySelector("#Pilot");
-pilotBtn.addEventListener("click", (e) => {
     crewTitle.textContent = `${myData["crew"][1]["name"]}`;
     crewPar.textContent = `${myData["crew"][1]["bio"]}`;
     crewImg.setAttribute("src",  `${myData["crew"][1]["images"]["png"]}`);
+    
 })
-let EngineerBtn = document.querySelector("#Engineer");
-EngineerBtn.addEventListener("click", (e) => {
+let pilotBtn = document.querySelector("#Pilot");
+pilotBtn.addEventListener("click", (e) => {
+    
     crewTitle.textContent = `${myData["crew"][2]["name"]}`;
     crewPar.textContent = `${myData["crew"][2]["bio"]}`;
     crewImg.setAttribute("src",  `${myData["crew"][2]["images"]["png"]}`);
+})
+let EngineerBtn = document.querySelector("#Engineer");
+EngineerBtn.addEventListener("click", (e) => {
+    
+    crewTitle.textContent = `${myData["crew"][0]["name"]}`;
+    crewPar.textContent = `${myData["crew"][0]["bio"]}`;
+    crewImg.setAttribute("src",  `${myData["crew"][0]["images"]["png"]}`);
 })
 let SpecialistBtn = document.querySelector("#Specialist");
 SpecialistBtn.addEventListener("click", (e) => {
@@ -212,7 +215,7 @@ technLi.addEventListener("click", (e) => {
 
     techTitle.textContent = `${myData["technology"][0]["name"]}`;
     techPar.textContent = `${myData["technology"][0]["description"]}`;
-    techImg.setAttribute("src",  `${myData["technology"][0]["images"]["png"]}`);
+    techImg.setAttribute("src",  `${myData["technology"][0]["images"]["portrait"]}`);
 })
 let technLinks = document.querySelectorAll(".container4 .pick .slides div");
 
@@ -231,7 +234,7 @@ firstBtn.addEventListener("click", (e) => {
 
     techTitle.textContent = `${myData["technology"][0]["name"]}`;
     techPar.textContent = `${myData["technology"][0]["description"]}`;
-    techImg.setAttribute("src",  `${myData["technology"][0]["images"]["png"]}`);
+    techImg.setAttribute("src",  `${myData["technology"][0]["images"]["portrait"]}`);
 
 })
 let secondBtn = document.querySelector("#two");
@@ -239,7 +242,7 @@ secondBtn.addEventListener("click", (e) => {
 
     techTitle.textContent = `${myData["technology"][1]["name"]}`;
     techPar.textContent = `${myData["technology"][1]["description"]}`;
-    techImg.setAttribute("src", `${myData["technology"][1]["images"]["png"]}`);
+    techImg.setAttribute("src", `${myData["technology"][1]["images"]["portrait"]}`);
 
 })
 let thirdBtn = document.querySelector("#three");
@@ -247,7 +250,7 @@ thirdBtn.addEventListener("click", (e) => {
 
     techTitle.textContent = `${myData["technology"][2]["name"]}`;
     techPar.textContent = `${myData["technology"][2]["description"]}`;
-    techImg.setAttribute("src", `${myData["technology"][2]["images"]["png"]}`);
+    techImg.setAttribute("src", `${myData["technology"][2]["images"]["portrait"]}`);
 
 })
 
