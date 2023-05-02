@@ -1,0 +1,303 @@
+
+/* Start Global Rules */
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+body{
+   font-family: 'Tajawal', sans-serif;
+  background-size: cover;
+  
+
+}
+a{
+  text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container ,.container2,.container3,.container4{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* End Global Rules */
+
+/* media query */
+/* Small */
+@media (max-width: 768px) {
+  .container, .container2,.container3,.container4 {
+    width: 750px;
+  }
+  body{
+   font-family: 'Tajawal', sans-serif;
+   background-image:url(../assets/home/background-home-mobile.jpg) ;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container, .container2,.container3 ,.container4{
+    width: 970px;
+  }
+  body{
+   font-family: 'Tajawal', sans-serif;
+   background-image:url(../assets/home/background-home-tablet.jpg) ;
+
+}
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container ,.container2,.container3,.container4{
+    width: 1170px;
+  }
+  body{
+   font-family: 'Tajawal', sans-serif;
+   /* background:url(../assets/home/background-home-desktop.jpg) ; */
+    background-image: url(../assets/home/background-home-desktop.jpg);
+}
+}
+/* end of media query */
+
+/* header_start */
+header ,.container{
+  display: flex;
+  height: fit-content;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: transparent;
+  align-items: center;
+}
+header .container img{
+  width: 32px;
+  height: 32px;
+  opacity: 0.8;
+}
+ul{
+  display: flex;
+  color: rgb(242, 241, 241);
+  background-color: #f1f1f133;
+  border-radius: 15px;
+  justify-content: space-around;
+  backdrop-filter: blur(5px);
+}
+li{
+  position: relative;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.active::after{
+  content: "";
+  position: absolute;
+  display: block;
+  
+  width: 100%;
+  height: 2px;
+  background-color: rgb(242, 241, 241);
+  border-radius: 5px;
+  top: 100%;
+}
+header .container .lists{
+  display: flex;
+  padding: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  color: rgb(242, 241, 241);
+  width: 60%;
+  background-color: #f1f1f133;
+  border-radius: 15px;
+  justify-content: space-around;
+  backdrop-filter: blur(5px);
+}
+.menu{
+    display: none;
+}
+header .container .lists .active::after{
+  content: "";
+  position: absolute;
+  display: block;
+  
+  width: 100%;
+  height: 2px;
+  background-color: rgb(242, 241, 241);
+  border-radius: 5px;
+  top: 170%;
+}
+header .container .lists li{
+  position: relative;
+  margin-left: 5px;
+  cursor: pointer;
+}
+header .container .lists li:hover{
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  body{
+   font-family: 'Tajawal', sans-serif;
+   background-image:url(../assets/home/background-home-mobile.jpg) ;
+       background-size: cover;
+  }
+  header .container{
+    position: relative;
+    padding-top: 15px;
+  }
+header .container .lists{
+  display: none;
+} 
+    .menu {
+  display: inline-block;
+  cursor: pointer;
+
+    }
+   header .container .block-bar{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      right: 2%;
+      top: 100%;
+      padding: 5px;
+      width: fit-content;
+    }
+ .bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(242, 241, 241);
+  margin: 6px 0;
+  transition: 0.4s;
+
+ }
+
+ .change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+ }
+
+ .change .bar2 {opacity: 0;}
+
+ .change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+ }
+ header .container .lists li {
+    padding: 15px;
+}
+header .container .lists .active::after{
+  top: 100%;
+  right: 2%;
+}
+}
+
+/* header_end */
+
+/* body-strat */
+  .home{
+    margin-top: 100px;
+    color: #f8f8f85f;
+  }
+  .home .container,.home .container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .home .container3,.home .container4{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .home .container .about{
+    width: 60%;
+  }
+  .home .container .explore{
+    padding: 50px;
+    border-radius: 50%;
+    background-color: white;
+    color: rgb(93, 92, 92);
+    
+  }
+   .home p{
+    font-size: x-large;
+    font-weight: 600;
+   }
+  .home h1{
+    color: white;
+    font-size: xxx-large;
+    font-weight: 900;
+  }
+  .home .container .explore p{
+    font-weight: 900;
+  }
+  .home .container3 img,.home .container4 img{
+    width: 30%;
+  }
+   .home .container3 .pick{
+    width: 60%;
+   }
+   .home .container4 .pick{
+    width: 60%;}
+   .container4 .pick .slides {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+   }
+   .home .container4 img{
+    height: 100%;
+   }
+   .container4 .pick .slides div{
+    width: fit-content;
+    padding: 18px;    border: 2px solid #f1f1f133;
+    border-radius: 50%;
+    color: #f1f1f133;
+    background-color: transparent;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 800;
+   }
+   .container4 .pick .slides div:hover{
+    opacity: 0.8;
+   }
+   .container4 .pick .slides .active-4{
+    
+    border: 2px solid #f1f1f133;
+    border-radius: 50%;
+    background-color: white;
+    color: darkblue;
+    
+   }
+    .container4 .pick .description{
+      display: flex;
+    }
+  @media (max-width: 768px) {
+    .home .container ,.home .container2,.home .container3,.home .container4{
+      flex-direction: column;
+      width: fit-content;
+      align-items: center;
+    }
+
+    .home .container2 img,.home .container3 img,.home .container4 img{
+      width: 90%;
+    }
+    
+    .home .description{
+      width: fit-content !important;
+    }
+    .home .container .about{
+    width: 90%;
+  }
+  .home .container .explore{
+    margin-top: 20px;
+  }
+     .home .container4 .pick{
+    width: 100%;}
+  }
+  
+/* body-end */
